@@ -8,11 +8,11 @@ Entry for the [Pigeon Pitch: One Line](https://make.fun/bounty/u-donrulezz-pigeo
 
 ## Entry
 
-> Coo! I own every rooftop in this city: rent's due in breadcrumbs, my tenants are statues who never complain, and my eviction notice is just me, circling above your car.
+> Coo! I own every rooftop in this city: rent's due in breadcrumbs, my tenants are statues who never complain, and my eviction notice is a single flyover above your car.
 
 ## Why this angle
 
-The existing entries already mined the "literal seed round" and "crumb subscription" angles. This one takes a fresh corner instead: the pigeon as the city's biggest landlord — rooftops as property, statues as perfect tenants, and the classic pigeon-on-a-car moment turned into an eviction notice. Pigeon voice throughout (coo, circling, statues, rooftops), one tight sentence, on-subject as a pitch to investors.
+The existing entries already mined the "literal seed round" and "crumb subscription" angles. This one takes a fresh corner instead: the pigeon as the city's biggest landlord — rooftops as property, statues as perfect tenants, and the classic pigeon-on-a-car moment turned into an eviction notice, delivered as a single flyover so the joke lands on the last beat. Pigeon voice throughout (coo, flyover, statues, rooftops), one tight sentence, on-subject as a pitch to investors.
 
 ## How to run
 

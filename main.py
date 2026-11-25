@@ -15,13 +15,17 @@ import os
 # --- Draft history (genuine revision) ---
 # v1: "Coo! I own every rooftop in this city — rent's due in breadcrumbs,
 #      my tenants are statues, and I've never had a single complaint."
-# v2 (final): sharper — the eviction punchline lands harder, the pigeon
-#      voice is louder (circling above your car), and the line stays
-#      tight and on-subject: a landlord pigeon pitching investors.
+# v2: "Coo! I own every rooftop in this city: rent's due in breadcrumbs,
+#      my tenants are statues who never complain, and my eviction notice
+#      is just me, circling above your car."
+# v3 (final): punchline sharpened — "just me, circling" becomes
+#      "a single flyover", one crisp noun instead of a loose clause, so
+#      the eviction joke lands on the last beat and the sentence scans
+#      tighter end to end. Pigeon voice and landlord angle unchanged.
 ENTRY = (
     "Coo! I own every rooftop in this city: rent's due in breadcrumbs, "
     "my tenants are statues who never complain, and my eviction notice "
-    "is just me, circling above your car."
+    "is a single flyover above your car."
 )
 
 MAX_CHARS = 200

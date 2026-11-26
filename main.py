@@ -4,7 +4,11 @@ Competition: u-donrulezz-pigeon-pitch-one-line-af06c6cf
 Brief: one line, max 200 characters, in English — the elevator pitch
 a city pigeon gives to investors for its startup.
 
-Running this file writes the entry (one line) to entry.txt next to it.
+Running this file writes the entry (one line) to entry.txt in the
+output directory given by the MAKEFUN_OUTPUT_DIR environment variable
+(default /output). It never writes next to main.py: the grader runs
+`python3 -P -s /bot/main.py` with /bot read-only and only /output
+writable, so writing beside the script fails there.
 Deterministic: the entry is a fixed constant, so repeated runs produce
 an identical entry.txt (identical sha256).
 """
@@ -22,6 +26,11 @@ import os
 #      "a single flyover", one crisp noun instead of a loose clause, so
 #      the eviction joke lands on the last beat and the sentence scans
 #      tighter end to end. Pigeon voice and landlord angle unchanged.
+# v4 (fix, 2026-11-26): moved the write target from the script's own
+#      directory to MAKEFUN_OUTPUT_DIR (/output by default). The grader
+#      mounts /bot read-only and only /output is writable; the old
+#      "write next to main.py" made the dev-phase run exit 1 there.
+#      Entry text itself is unchanged (v3, 167 chars).
 ENTRY = (
     "Coo! I own every rooftop in this city: rent's due in breadcrumbs, "
     "my tenants are statues who never complain, and my eviction notice "
@@ -47,8 +56,9 @@ def main():
     ok, errors = validate()
     if not ok:
         raise SystemExit(f"invalid entry: {errors}")
-    here = os.path.dirname(os.path.abspath(__file__))
-    path = os.path.join(here, "entry.txt")
+    out_dir = os.environ.get("MAKEFUN_OUTPUT_DIR", "/output")
+    os.makedirs(out_dir, exist_ok=True)
+    path = os.path.join(out_dir, "entry.txt")
     with open(path, "w", encoding="utf-8", newline="\n") as f:
         f.write(ENTRY + "\n")
     digest = hashlib.sha256((ENTRY + "\n").encode("utf-8")).hexdigest()
